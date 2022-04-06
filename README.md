@@ -13,7 +13,7 @@ Acesso puro ao banco de dados:
                 //acesso ao banco de dados</br>
             }</br>
 
-> Bibliotecas necessárias
+ Bibliotecas necessárias
 
 | Adicionando  | Removendo    |                                |
 |  ---------|----------------- |
