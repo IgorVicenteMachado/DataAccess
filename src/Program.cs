@@ -1,3 +1,4 @@
+using Microsoft.Data.SqlClient; 
 namespace dataaccess
 {
     class Program
@@ -7,8 +8,10 @@ namespace dataaccess
             
         static void Main(string[] args)
         {
-
-            Console.WriteLine("hello, world");
+            using (var connection = new SqlConnection())
+            {
+                //acesso ao banco de dados
+            }
         }
     }
 }
