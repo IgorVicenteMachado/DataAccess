@@ -16,6 +16,6 @@ Acesso puro ao banco de dados:
 
 > Bibliotecas necessárias
  - adicionando: 
-| dotnet add package microsoft.Data.SqlClient --version x.x.x 
- - - removendo: 
-| dotnet remove package microsoft.Data.SqlClient 
+| - dotnet add package microsoft.Data.SqlClient --version x.x.x 
+ - removendo: 
+| - dotnet remove package microsoft.Data.SqlClient 
