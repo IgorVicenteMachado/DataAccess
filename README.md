@@ -20,3 +20,7 @@ Acesso puro ao banco de dados:
 | dotnet add package microsoft.Data.SqlClient --version x.x.x  | dotnet remove package microsoft.Data.SqlClient |
 
 
+| adicionando  | Restrição                                             |
+| --- | ----------------------------------------------------- |
+| 01  | O projeto deverá ser entregue até o final do semestre |
+| 02  | Não pode ser desenvolvido um módulo de backend        |
