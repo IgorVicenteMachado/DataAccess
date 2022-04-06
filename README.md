@@ -13,11 +13,7 @@ Acesso puro ao banco de dados:
                 //acesso ao banco de dados</br>
             }</br>
 
- Bibliotecas necessárias
-
-| Adicionando  | Removendo    |                                |
-|  ---------|----------------- |
-| dotnet add package microsoft.Data.SqlClient --version x.x.x  | dotnet remove package microsoft.Data.SqlClient |
+ > Bibliotecas necessárias
 
 
 | adicionando  | removendo                                             |
