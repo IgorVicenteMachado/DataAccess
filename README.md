@@ -2,6 +2,8 @@
 
 ## Acesso puro ao banco de dados: 
 
+ADO (através do SqlClient) - é a base de acesso a dados. Dapper, Entity e outras bibliotecas de acesso a dados fazem uso do ADO.
+
 
 1. opção 1: </br>
   var connection = new SqlConnection();</br>
