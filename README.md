@@ -2,6 +2,7 @@
 
 ## Acesso puro ao banco de dados: 
 
+
 1. opção 1: </br>
   var connection = new SqlConnection();</br>
             connection.Open();</br>
@@ -15,8 +16,10 @@
 
  > ## Bibliotecas necessárias
 
-
-| Tipo | adicionando  | removendo                                             |
-|--- | --- | ----------------------------------------------------- |
+| Tipo| adicionando  | removendo                                             |
+|---  | --- | ----------------------------------------------------- |
 | ADO | dotnet add package microsoft.Data.SqlClient --version x.x.x  | dotnet remove package microsoft.Data.SqlClient |
-|  |   |        |
+|  |https://docs.microsoft.com/pt-br/sql/connect/ado-net/overview-sqlclient-driver?view=sql-server-ver15   |        |
+
+
+OBS: dotnet new console 
