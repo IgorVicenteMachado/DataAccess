@@ -22,6 +22,7 @@ ADO (através do SqlClient) - é a base de acesso a dados. Dapper, Entity e outr
 |---  | --- | ----------------------------------------------------- |
 | ADO | dotnet add package microsoft.Data.SqlClient --version x.x.x  | dotnet remove package microsoft.Data.SqlClient |
 |  |https://docs.microsoft.com/pt-br/sql/connect/ado-net/overview-sqlclient-driver?view=sql-server-ver15   |        |
-
+| DAPPER | dotnet add package dapper --version 2.0.90  | dotnet remove package dapper |
+| | https://docs.microsoft.com/pt-br/dotnet/standard/data/sqlite/dapper-limitations | |
 
 OBS: dotnet new console 

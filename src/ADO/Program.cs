@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Data.SqlClient; 
 
-namespace dataaccess.src.ado
+namespace dataaccess.ado
 {
     class Program
     {
