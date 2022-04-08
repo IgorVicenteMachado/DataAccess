@@ -19,22 +19,24 @@ ADO (através do SqlClient) - é a base de acesso a dados. Dapper, Entity e outr
             }</br>
 
 ## Dapper: 
- https://docs.microsoft.com/pt-br/dotnet/standard/data/sqlite/dapper-limitations
- 
- 
+ https://docs.microsoft.com/pt-br/dotnet/standard/data/sqlite/dapper-limitations</br>
+           
  Utilização de classes [com propriedades] para tipagem e rastreamento pelo dapper. 
-<<<<<<< HEAD
  Importante: tipo e nome da propriedade deve ser o mesmo tipo e nome na tabela. Exceção: utilização de alias.
-=======
- Importante: tipo e nome da propriedade deve ser o mesmo tipo e nome contido no db. Exceção: utilização de alias. 
- 
- 
+
  Segue comparação: </br> 
 ![tbl](src/img/tblcateg.PNG)
 ![class](src/img/classcateg.PNG)
->>>>>>> a7fd3751dff44964b2e1aa93397faec6903b403d
 
 
+ >  OBS: ataque sqlinjection </br>
+  
+  -  ERRADO ->  `var insertSql = $@"insert into Category values 
+                ({category.Id}, {category.Title} , ... )";` [não se pode concatenar, risco ataque] </br>
+
+  -  CORRETO -> `var insertSql = $@"insert into Category values 
+                ( @paramId, @paramTitle , @paramUrl, @paramSummary, @paramOrder, @paramDescription, @paramFeatured )";`
+      
 ## 
  > ## Bibliotecas necessárias
 
