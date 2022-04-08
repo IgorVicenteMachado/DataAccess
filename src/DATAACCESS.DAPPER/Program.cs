@@ -14,7 +14,7 @@ namespace DATAACCESS.DAPPER
             
             using (var connection = new SqlConnection(CONNECTION_STRING) )
             {
-                var categories = connection.Query<Category>("select [Id], [title] from [category] order by Title;");
+                var categories = connection.Query<Category>("select [Id], [title] from [category] order by [Title];");
 
                 foreach(var category in categories)
                 {
