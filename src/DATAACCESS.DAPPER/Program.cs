@@ -7,44 +7,61 @@ namespace DATAACCESS.DAPPER
 {
     class Program
     {
+       
+
         static void Main(string[] args)
         {
-            const string CONNECTION_STRING = 
-            @"Server = localhost,1433; Database=praticandodb; User ID=sa; password=!@#$%12345;TrustServerCertificate=True";
-            
-            var category = new Category();
-            category.Id = Guid.NewGuid();
-            category.Title = "Amazon AWS";
-            category.Url = "amazon.aws";
-            category.Summary = "aws cloudy";
-            category.Order = 8;
-            category.Description = "Serviços em nuvem com AWS";
-            category.Featured = true;
+            const string CONNECTION_STRING =
+                @"Server = localhost,1433; Database=praticandodb; User ID=sa; password=!@#$%12345;TrustServerCertificate=True";
+           
 
-             var insertSql = $@"insert into Category values 
+
+            using (var connection = new SqlConnection(CONNECTION_STRING))
+            {
+                //InsertCategory(connection);
+                //UpdateCategory(connection);
+                ListCategories(connection);
+            }
+        }
+
+        private static void UpdateCategory(SqlConnection connection)
+        {
+            var queryUpdate = "update [category] Set [Title]=@paramTitle where [Id]=@paramId";
+            var rows = connection.Execute(queryUpdate, 
+            new {
+                paramTitle = "New Title",
+                paramId = "1a74f443-de90-4ff6-b851-7be52ca305bc"
+            });
+
+            System.Console.WriteLine(rows + " registros foram atualizados");
+        }
+
+        private static void InsertCategory(SqlConnection connection)
+        {
+            var queryInsert = $@"insert into Category values 
                 ( @paramId, @paramTitle , @paramUrl, @paramSummary, @paramOrder, @paramDescription, @paramFeatured )";
 
+            var category = new Category(Guid.NewGuid(), "title", "url", "summary", 9, "cloud com azure da microsoft", false);
 
-            using (var connection = new SqlConnection(CONNECTION_STRING) )
+            var rows = connection.Execute(queryInsert, new
             {
-                var rows = connection.Execute(insertSql, new {
-                    paramId = category.Id,                     //@paramId
-                    paramTitle = category.Title,               //@paramTitle
-                    paramUrl = category.Url,                   //@paramUrl
-                    paramSummary = category.Summary,           //@paramSummary
-                    paramOrder = category.Order,               //@paramOrder
-                    paramDescription = category.Description,   //@paramDescription
-                    paramFeatured = category.Featured          //@paramFeatured
-                });
+                paramId = category.Id,                     //@paramId
+                paramTitle = category.Title,               //@paramTitle
+                paramUrl = category.Url,                   //@paramUrl
+                paramSummary = category.Summary,           //@paramSummary
+                paramOrder = category.Order,               //@paramOrder
+                paramDescription = category.Description,   //@paramDescription
+                paramFeatured = category.Featured          //@paramFeatured
+            });
+        }
 
-                System.Console.WriteLine(rows);
+        private static void ListCategories(SqlConnection connection)
+        {
+            var categories = connection.Query<Category>("select [Id], [title] from [category] order by [Title];");
 
-                var categories = connection.Query<Category>("select [Id], [title] from [category] order by [Title];");
-
-                foreach(var item in categories)
-                {
-                    Console.WriteLine($"{item.Id} | {item.Title}");
-                }
+            foreach (var item in categories)
+            {
+                Console.WriteLine($"{item.Id} | {item.Title} ");
             }
         }
     }
