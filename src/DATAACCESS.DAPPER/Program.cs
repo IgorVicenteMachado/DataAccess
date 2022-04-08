@@ -30,7 +30,7 @@ namespace DATAACCESS.DAPPER
             var rows = connection.Execute(queryUpdate, 
             new {
                 paramTitle = "New Title",
-                paramId = "1a74f443-de90-4ff6-b851-7be52ca305bc"
+                paramId = "1a74f443-de90-4ff6-b851-7be52ca305bc" //id copiado da base de dados
             });
 
             System.Console.WriteLine(rows + " registros foram atualizados");
