@@ -19,8 +19,10 @@ ADO (através do SqlClient) - é a base de acesso a dados. Dapper, Entity e outr
 ## Dapper: 
 
  Utilização de classes [com propriedades] para tipagem e rastreamento pelo dapper. 
- Importante: tipo e nome da propriedade deve ser o mesmo tipo e nome contido no db. Exceção: utilização de alias.
-![tbl]('src/img/tblcateg.PNG')
+ Importante: tipo e nome da propriedade deve ser o mesmo tipo e nome contido no db. Exceção: utilização de alias. 
+ Segue comparação: 
+![tbl](src/img/tblcateg.PNG)
+![class](src/img/classcateg.PNG)
 
  > ## Bibliotecas necessárias
 
