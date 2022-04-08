@@ -1,8 +1,10 @@
-namespace DATAACCESS.DAPPER.Models
+using System;
+
+namespace dataAccess.DAPPER.Models
 {
     public class Category
     {
-        public System.Guid Id {get; set;}
+        public Guid Id {get; set;}
         public string Title {get; set;}
     }
 }
