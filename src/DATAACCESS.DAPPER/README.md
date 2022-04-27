@@ -1,4 +1,4 @@
-##Criando Procedure `spDeleteStudent` 
+## Criando Procedure `spDeleteStudent` 
 
 CREATE OR ALTER   PROCEDURE [dbo].[spDeleteStudent] ( </br>
     @StudentId UNIQUEIDENTIFIER</br>
@@ -17,7 +17,7 @@ AS</br>
     COMMIT</br>
 GO
 
-##Criando Procedure `spGetCoursesByCategory` 
+## Criando Procedure `spGetCoursesByCategory` 
 
 CREATE OR ALTER PROCEDURE [spGetCoursesByCategory] </br>
     @CategoryId UNIQUEIDENTIFIER</br>
