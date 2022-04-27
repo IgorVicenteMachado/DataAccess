@@ -21,6 +21,8 @@ ADO (através do SqlClient) - é a base de acesso a dados. Dapper, Entity e outr
 ## Dapper: 
  https://docs.microsoft.com/pt-br/dotnet/standard/data/sqlite/dapper-limitations</br>
            
+ [ extensão do SqlClient ]
+
  Utilização de classes [com propriedades] para tipagem e rastreamento pelo dapper. 
  Importante: tipo e nome da propriedade deve ser o mesmo tipo e nome na tabela. Exceção: utilização de alias.
 

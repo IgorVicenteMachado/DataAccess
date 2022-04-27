@@ -15,7 +15,7 @@ namespace dataAccess.DAPPER.Models
             Featured = featured;
         }
         protected Category() {} // uso do dapper
-       // public Guid Id {get; private set;}
+
         public string Title {get; private set;}
         public string Url {get; private set;}
         public string Summary { get; private set; }
